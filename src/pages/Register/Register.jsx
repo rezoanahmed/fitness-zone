@@ -6,11 +6,24 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/ContextProvider';
 
 const Register = () => {
-    const {googleLogin} = useContext(AuthContext);
+    const {googleLogin, registerUser} = useContext(AuthContext);
     const handleGoogleLogin=()=>{
         googleLogin()
         .then(user=>console.log(user))
         .catch(err=>console.log(err))
+    }
+
+    // registration form submission
+    const register = e =>{
+        e.preventDefault()
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        // console.log("submitted", email);
+        // console.log("submitted", password);
+        registerUser(email, password)
+        .then(user=>console.log(user))
+        .catch(err=>console.log(err))
+
     }
     
     return (
@@ -21,24 +34,24 @@ const Register = () => {
         <h1 className='text-2xl font-semibold text-center my-5'>Register today and start your journey!</h1>
             <div className=' flex items-center justify-center'>
                 <div className="card shadow-2xl bg-base-100">
-                    <form className="card-body">
+                    <form onSubmit={register}  className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" placeholder="Enter Your Full Name" className="input input-bordered" required />
+                            <input name='name' type="text" placeholder="Enter Your Full Name" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" placeholder="Enter Your Email Address" className="input input-bordered" required />
+                            <input name='email' type="email" placeholder="Enter Your Email Address" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" placeholder="Enter Password" className="input input-bordered" required />
+                            <input name='password' type="password" placeholder="Enter Password" className="input input-bordered" required />
                         </div>
                         
                         <div className="form-control mt-6">
