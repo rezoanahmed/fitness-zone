@@ -8,16 +8,16 @@ import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
     return (
-        <div>
-            <Helmet>
-                <title>Gym Zone | Home</title>
-            </Helmet>
-            <Hero></Hero>
-            <Services></Services>
-            <Trainers></Trainers>
-            <Plans></Plans>
-            <Footer></Footer>
-        </div>
+        <>
+            <div>
+
+                <Hero></Hero>
+                <Services></Services>
+                <Trainers></Trainers>
+                <Plans></Plans>
+                <Footer></Footer>
+            </div>
+        </>
     );
 };
 

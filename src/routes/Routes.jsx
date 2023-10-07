@@ -13,6 +13,8 @@ import ServiceDetails from "../pages/Services/ServiceDetails";
 import TrainerDetails from "../pages/Trainers/TrainerDetails";
 import PlanDetails from "../pages/Plans/PlanDetails";
 import Error from '../pages/Error/Error'
+import About from "../pages/About/About";
+import Contact from "../pages/Contact/Contact";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -57,6 +59,14 @@ export const router = createBrowserRouter([
           path: '/plans/:id',
           element: <PlanDetails></PlanDetails>,
           loader: ()=>fetch('/gymSupplements.json')
+        },
+        {
+          path: '/about',
+          element: <About></About>
+        },
+        {
+          path: '/contact',
+          element: <Contact></Contact>
         }
     ]
   },
