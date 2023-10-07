@@ -4,14 +4,18 @@ import swal from 'sweetalert';
 
 import { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useNavigation } from 'react-router-dom';
 import { AuthContext } from '../../context/ContextProvider';
 
 const Register = () => {
     const { googleLogin, registerUser } = useContext(AuthContext);
+    const navigate = useNavigate();
     const handleGoogleLogin = () => {
         googleLogin()
-            .then(user => console.log(user))
+            .then(user => {
+                console.log(user)
+                navigate('/');
+            })
             .catch(err => console.log(err))
     }
 
@@ -30,6 +34,8 @@ const Register = () => {
                 e.target.email.value = "";
                 e.target.password.value = "";
                 swal("Congratulations!", "Now You're a member of GYM ZONE", "success");
+                navigate('/login')
+                
 
             })
             .catch(err => {
@@ -38,6 +44,8 @@ const Register = () => {
                 if (code == 'auth/email-already-in-use') {
 
                     swal("Sorry!", "This email is already in use", "error");
+                } else if(code == 'auth/invalid-email'){
+                    swal("Invalid Email Address", "", "error");
                 }
                 else {
                     swal("OOPS!", "Something went wrong", "error");

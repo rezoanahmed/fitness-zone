@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Hero = () => {
     return (
@@ -11,7 +12,7 @@ const Hero = () => {
                         <p className="mb-5">Transform Your Mind & Body. <br />
                         Step In, Power Up, Achieve More! <br />
                             Join Us and Ignite Your Fitness Journey!</p>
-                        <button className="bg-red-600 font-medium p-2 rounded-lg">Join Us Today!</button>
+                            <NavLink to='/login' className="bg-red-600 font-medium p-2 rounded-lg">Join Us Today!</NavLink>
                     </div>
                 </div>
             </div>

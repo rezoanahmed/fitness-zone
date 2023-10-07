@@ -1,17 +1,21 @@
 import { FcGoogle } from "react-icons/fc";
 import { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/ContextProvider';
 import swal from 'sweetalert';
 
 
 const Login = () => {
     const { googleLogin, loginUser } = useContext(AuthContext);
+    const navigate = useNavigate();
     // sign in with google
     const handleGoogleLogin = () => {
         googleLogin()
-            .then(user => console.log(user))
+            .then(user => {
+                // console.log(user)
+                navigate('/');
+            })
             .catch(err => console.log(err))
     }
 
@@ -23,9 +27,10 @@ const Login = () => {
 
         loginUser(email, password)
             .then(() => {
-                e.target.email.value = "";
-                e.target.password.value = "";
-                swal("Welcome", "You've succesfully logged in", "success");
+                // e.target.email.value = "";
+                // e.target.password.value = "";
+                // swal("Welcome", "You've succesfully logged in", "success");
+                navigate('/');
 
             })
             .catch(err => {
