@@ -9,6 +9,8 @@ import Register from "../pages/Register/Register";
 import Services from "../pages/Services/Services";
 import Trainers from "../pages/Trainers/Trainers";
 import Plans from "../pages/Plans/Plans";
+import ServiceDetails from "../pages/Services/ServiceDetails";
+import TrainerDetails from "../pages/Trainers/TrainerDetails";
 
 export const router = createBrowserRouter([
   {
@@ -32,8 +34,18 @@ export const router = createBrowserRouter([
             element: <Services></Services>
         },
         {
+          path: '/services/:id',
+          element: <ServiceDetails></ServiceDetails>,
+          loader: ()=>fetch('/gym.json')
+        },
+        {
             path: '/trainers',
             element: <Trainers></Trainers>
+        },
+        {
+          path: '/trainers/:id',
+          element: <TrainerDetails></TrainerDetails>,
+          loader: ()=>fetch('/personalTrainer.json'),
         },
         {
           path: '/plans',

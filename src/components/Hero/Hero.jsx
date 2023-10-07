@@ -3,7 +3,7 @@ import React from 'react';
 const Hero = () => {
     return (
         <div>
-            <div className="hero h-[70vh]" style={{ backgroundImage: 'url(https://i.ibb.co/fvb0DTx/body.jpg)' }}>
+            <div className="hero md:h-[90vh] lg:h-[70vh]" style={{ backgroundImage: 'url(https://i.ibb.co/fvb0DTx/body.jpg)' }}>
                 <div className="hero-overlay bg-black bg-opacity-70"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
