@@ -1,4 +1,4 @@
-
+import { FcGoogle } from "react-icons/fc";
 import { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -37,7 +37,7 @@ const Login = () => {
                             <button className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">Login</button>
                         </div>
                         <div className="form-control mt-1">
-                            <button onClick={handleGoogleLogin} className="border px-4 py-2 rounded-lg hover:bg-blue-50">Get Started with Google</button>
+                            <button onClick={handleGoogleLogin} className="flex items-center justify-center gap-2 border px-4 py-2 rounded-lg hover:bg-blue-50"><FcGoogle className="text-xl"></FcGoogle>Sign in with Google</button>
                         </div>
                         <div className='mt-2'>
                             New user? <Link to='/register'><span className='text-red-500 font-medium'>Register Today!</span></Link>

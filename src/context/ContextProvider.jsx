@@ -4,7 +4,7 @@ import {auth} from '../firebase/firebase.config'
 
 export const AuthContext = createContext("");
 const ContextProvider = ({children}) => {
-
+    // sign in with google
     const googleLogin = () =>{
         const provider = new GoogleAuthProvider();
         return signInWithPopup(auth, provider)
