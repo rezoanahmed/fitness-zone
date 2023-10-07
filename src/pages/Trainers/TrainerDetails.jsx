@@ -19,8 +19,8 @@ const TrainerDetails = () => {
 
             {/* <p>{data.length}</p> */}
             <div className="mt-10">
-                <div className="flex items-center justify-center gap-10">
-                <img src={image} className="h-[50vh] w-[50vh] rounded-xl" alt="" />
+                <div className="flex flex-col md:flex-row items-center justify-center gap-10">
+                <img src={image} className="md:h-[50vh] md:w-[50vh] rounded-xl" alt="" />
                 <div className="flex flex-col gap-3">
                 <p className="text-4xl font-bold">{title}</p>
                 <p>ID: {id}</p>
