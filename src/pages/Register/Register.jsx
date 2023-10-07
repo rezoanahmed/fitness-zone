@@ -28,7 +28,7 @@ const Register = () => {
                         </div>
                         
                         <div className="form-control mt-6">
-                            <button className="bg-red-500 text-white px-4 py-2 rounded-lg">Register</button>
+                            <button className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">Register</button>
                         </div>
                         <div className='mt-2'>
                             Already Have Account? <Link to='/login'><span className='text-red-500 font-medium'>Login Now!</span></Link>

@@ -22,7 +22,7 @@ const Login = () => {
                         </div>
                         
                         <div className="form-control mt-6">
-                            <button className="bg-red-500 text-white px-4 py-2 rounded-lg">Login</button>
+                            <button className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">Login</button>
                         </div>
                         <div className='mt-2'>
                             New user? <Link to='/register'><span className='text-red-500 font-medium'>Register Today!</span></Link>
