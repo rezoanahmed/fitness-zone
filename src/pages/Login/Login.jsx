@@ -1,9 +1,13 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
         <>
+        <Helmet>
+            <title>Gym Zone | Login</title>
+        </Helmet>
         <h1 className='text-2xl font-semibold text-center my-5'>Login today and pump yourself!</h1>
             <div className=' flex items-center justify-center'>
                 <div className="card shadow-2xl bg-base-100">

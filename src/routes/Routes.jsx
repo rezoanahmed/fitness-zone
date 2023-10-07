@@ -12,11 +12,12 @@ import Plans from "../pages/Plans/Plans";
 import ServiceDetails from "../pages/Services/ServiceDetails";
 import TrainerDetails from "../pages/Trainers/TrainerDetails";
 import PlanDetails from "../pages/Plans/PlanDetails";
-
+import Error from '../pages/Error/Error'
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error> ,
     children: [
         {
             path: '/',
