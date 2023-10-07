@@ -6,13 +6,16 @@ import {
 import "./index.css";
 import { router } from "./routes/Routes.jsx";
 import { HelmetProvider } from "react-helmet-async";
+import ContextProvider from "./context/ContextProvider";
 
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <HelmetProvider>
-    <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
-  </HelmetProvider>
+  <ContextProvider>
+    <HelmetProvider>
+      <React.StrictMode>
+        <RouterProvider router={router} />
+      </React.StrictMode>
+    </HelmetProvider>
+  </ContextProvider>
 );

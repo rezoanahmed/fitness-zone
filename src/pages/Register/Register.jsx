@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/ContextProvider';
 
 const Register = () => {
+    const {googleLogin} = useContext(AuthContext);
+    const handleGoogleLogin=()=>{
+        googleLogin()
+        .then(user=>console.log(user))
+        .catch(err=>console.log(err))
+    }
+    
     return (
         <>
         <Helmet>
@@ -33,6 +41,9 @@ const Register = () => {
                         
                         <div className="form-control mt-6">
                             <button className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">Register</button>
+                        </div>
+                        <div className="form-control mt-1">
+                            <button onClick={handleGoogleLogin} className="border px-4 py-2 rounded-lg hover:bg-blue-50">Get Started with Google</button>
                         </div>
                         <div className='mt-2'>
                             Already Have Account? <Link to='/login'><span className='text-red-500 font-medium'>Login Now!</span></Link>
