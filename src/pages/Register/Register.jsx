@@ -20,23 +20,26 @@ const Register = () => {
         e.preventDefault()
         const email = e.target.email.value;
         const password = e.target.password.value;
+
         // console.log("submitted", email);
         // console.log("submitted", password);
         registerUser(email, password)
             .then(user => {
                 // console.log(user);
+                e.target.name.value = "";
+                e.target.email.value = "";
+                e.target.password.value = "";
                 swal("Congratulations!", "Now You're a member of GYM ZONE", "success");
-
 
             })
             .catch(err => {
                 const code = err.code;
                 console.log(err.code);
-                if(code == 'auth/email-already-in-use'){
+                if (code == 'auth/email-already-in-use') {
 
                     swal("Sorry!", "This email is already in use", "error");
                 }
-                else{
+                else {
                     swal("OOPS!", "Something went wrong", "error");
                 }
 

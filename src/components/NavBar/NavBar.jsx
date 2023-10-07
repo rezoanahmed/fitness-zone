@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Logo from '../Logo/Logo';
 import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../../context/ContextProvider';
+import swal from 'sweetalert';
 
 const NavBar = () => {
+    const {user, logOut} = useContext(AuthContext);
+    // handle log out
+    const handleLogOut = () =>{
+        logOut()
+        .then(()=>{
+            swal("Great!", "You've logged out succesfully", "success");
+        })
+        .catch(()=>{
+            swal("OPPS!", "Something went wrong", "error");
+        })
+    }
     const links = <>
        <li><NavLink to='/'>Home</NavLink></li>
        <li><NavLink to='/services'>Services</NavLink></li>
@@ -31,7 +44,19 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <NavLink to='/login' className='p-2 rounded-md bg-red-500 text-white font-medium hover:bg-red-600'>Login</NavLink>
+                    {user?
+                    <div className='flex items-center gap-2'>
+                        {user.photoURL?
+                        <img src={user.photoURL} alt="" className='h-[35px] w-[35px] rounded-full'/>
+                        :
+                        <img src='https://i.ibb.co/Bcjq85V/user.png' alt="" className='h-[35px] w-[35px] rounded-full' />
+                        
+                    }
+                    <NavLink onClick={()=>handleLogOut()} className='p-2 rounded-md bg-red-500 text-white font-medium hover:bg-red-600'>Log Out</NavLink>    
+                    </div>
+                    :
+                    <NavLink to='/login' className='p-2 rounded-md bg-red-500 text-white font-medium hover:bg-red-600'>Login</NavLink>    
+                }
                 </div>
             </div>
 
