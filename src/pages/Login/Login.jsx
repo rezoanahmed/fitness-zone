@@ -3,13 +3,40 @@ import { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/ContextProvider';
+import swal from 'sweetalert';
+
 
 const Login = () => {
-    const {googleLogin} = useContext(AuthContext);
+    const {googleLogin, loginUser} = useContext(AuthContext);
+    // sign in with google
     const handleGoogleLogin = () =>{
         googleLogin()
         .then(user=>console.log(user))
         .catch(err=>console.log(err))
+    }
+
+    // sign in with email and password
+    const handleSignIn=(e)=>{
+        e.preventDefault();
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        loginUser(email,password)
+        .then(()=>{
+            swal("Welcome","You've succesfully logged in", "success");
+
+        })
+        .catch(err=>{
+            const errorCode = err.code;
+            // console.log(errorCode);
+            if(errorCode=="auth/invalid-login-credentials"){
+                swal("Try Again!","email and password did't match", "error");
+            }
+            else{
+                swal("OOPS!","Something went wrong", "error");
+
+            }
+        });
+
     }
     return (
         <>
@@ -19,18 +46,18 @@ const Login = () => {
         <h1 className='text-2xl font-semibold text-center my-5'>Login today and pump yourself!</h1>
             <div className=' flex items-center justify-center'>
                 <div className="card shadow-2xl bg-base-100">
-                    <form className="card-body">
+                    <form onSubmit={handleSignIn} className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" placeholder="Enter Your Email Address" className="input input-bordered" required />
+                            <input name='email' type="email" placeholder="Enter Your Email Address" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" placeholder="Enter Password" className="input input-bordered" required />
+                            <input name='password' type="password" placeholder="Enter Password" className="input input-bordered" required />
                         </div>
                         
                         <div className="form-control mt-6">
