@@ -11,6 +11,7 @@ import Trainers from "../pages/Trainers/Trainers";
 import Plans from "../pages/Plans/Plans";
 import ServiceDetails from "../pages/Services/ServiceDetails";
 import TrainerDetails from "../pages/Trainers/TrainerDetails";
+import PlanDetails from "../pages/Plans/PlanDetails";
 
 export const router = createBrowserRouter([
   {
@@ -50,6 +51,11 @@ export const router = createBrowserRouter([
         {
           path: '/plans',
           element: <Plans></Plans>
+        },
+        {
+          path: '/plans/:id',
+          element: <PlanDetails></PlanDetails>,
+          loader: ()=>fetch('/gymSupplements.json')
         }
     ]
   },
