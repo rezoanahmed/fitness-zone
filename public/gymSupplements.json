@@ -1,0 +1,38 @@
+[
+    {
+        "id": "sp101",
+        "title": "Beginner Plan",
+        "image": "https://i.ibb.co/3WGKRwD/ctrl-a-meal-replacement-03e4-Rajf-FAE-unsplash.jpg",
+        "price": 45.00,
+        "details": "A basic supplement plan for those new to gym and fitness.",
+        "supplements": [
+            "Balanced Whey Protein",
+            "Multivitamins",
+            "Fish Oil Capsules"
+        ]
+    },
+    {
+        "id": "sp102",
+        "title": "Aesthetic Plan",
+        "image": "https://i.ibb.co/Q8yXdWM/aleksander-saks-7l-Q1m08-Z7e-E-unsplash.jpg",
+        "price": 60.00,
+        "details": "Designed for those aiming for a lean and toned physique.",
+        "supplements": [
+            "BCAAs (Branched-Chain Amino Acids)",
+            "Fat Burners",
+            "Casein Protein"
+        ]
+    },
+    {
+        "id": "sp103",
+        "title": "Bulking Plan",
+        "image": "https://i.ibb.co/CM8Ynz3/joseph-greve-Tivp5f-Ye4-Ng-unsplash.jpg",
+        "price": 70.00,
+        "details": "For those looking to put on muscle mass.",
+        "supplements": [
+            "Mass Gainers",
+            "Creatine Monohydrate",
+            "High-Calorie Shakes"
+        ]
+    }
+]
