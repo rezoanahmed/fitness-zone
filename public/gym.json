@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "title": "Basic Package",
         "details": "Access to standard gym equipment and 2 group classes per week.",
         "price": "$50/month",
@@ -10,6 +11,7 @@
         ]
     },
     {
+        "id": 2,
         "title": "Silver Package",
         "details": "Includes everything in Basic plus access to the pool and sauna.",
         "price": "$75/month",
@@ -22,6 +24,7 @@
         ]
     },
     {
+        "id": 3,
         "title": "Gold Package",
         "details": "Unlimited group classes, premium equipment access, pool, and sauna.",
         "price": "$100/month",
@@ -34,6 +37,7 @@
         ]
     },
     {
+        "id": 4,
         "title": "Platinum Package",
         "details": "Access to premium equipment, unlimited group classes, pool, sauna, personal trainer sessions, and nutrition advice.",
         "price": "$150/month",
@@ -48,6 +52,7 @@
         ]
     },
     {
+        "id": 5,
         "title": "Couples Package",
         "details": "2 memberships with access to standard equipment and 4 group classes.",
         "price": "$90/month",
@@ -58,6 +63,7 @@
         ]
     },
     {
+        "id": 6,
         "title": "Family Package",
         "details": "Up to 4 family members with access to premium equipment, unlimited group classes, pool, sauna, and a kids' zone.",
         "price": "$180/month",
