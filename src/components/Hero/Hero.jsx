@@ -9,8 +9,7 @@ const Hero = () => {
                     <div className="max-w-md">
                         <h1 className="mb-5 text-3xl font-bold">Unleash Your Inner Strength in Every Rep, Every Step!</h1>
                         <p className="mb-5">Transform Your Mind & Body. <br />
-
-                            Dedicated Trainers, Top-Notch Equipment. <br />
+                        Step In, Power Up, Achieve More! <br />
                             Join Us and Ignite Your Fitness Journey!</p>
                         <button className="bg-red-600 font-medium p-2 rounded-xl">Join Us Today!</button>
                     </div>
