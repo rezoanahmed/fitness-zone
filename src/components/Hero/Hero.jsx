@@ -11,7 +11,7 @@ const Hero = () => {
                         <p className="mb-5">Transform Your Mind & Body. <br />
                         Step In, Power Up, Achieve More! <br />
                             Join Us and Ignite Your Fitness Journey!</p>
-                        <button className="bg-red-600 font-medium p-2 rounded-xl">Join Us Today!</button>
+                        <button className="bg-red-600 font-medium p-2 rounded-lg">Join Us Today!</button>
                     </div>
                 </div>
             </div>
