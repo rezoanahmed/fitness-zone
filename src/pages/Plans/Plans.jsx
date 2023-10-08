@@ -4,11 +4,9 @@ import Aos from "aos";
 
 const Plans = () => {
     // animation
-    useEffect(()=>{
-        Aos.init({
+    Aos.init({
             duration: 1500
         })
-    },[])
     const [plans, setPlans] = useState([]);
     useEffect(() => {
         fetch("/gymSupplements.json")

@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
 import Service from "./Service";
 import Aos from "aos";
-import 'aos/dist/aos.css'
 
 const Services = () => {
     // animation
-    useEffect(() => {
         Aos.init({
             duration: 1500
         })
-    }, [])
+  
     const [service, setService] = useState([]);
     useEffect(() => {
         fetch('/gym.json')

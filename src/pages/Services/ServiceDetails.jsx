@@ -3,11 +3,10 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import Aos from 'aos';
 const ServiceDetails = () => {
     // animation
-    useEffect(()=>{
         Aos.init({
             duration: 1500
         })
-    },[])
+   
     const {id} = useParams()
     const [serviceDetails, setDetails] = useState({});
     // useEffect(()=>{

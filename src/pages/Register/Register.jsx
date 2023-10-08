@@ -1,20 +1,19 @@
 import { FcGoogle } from "react-icons/fc";
 import swal from 'sweetalert';
 import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/ContextProvider';
 
 const Register = () => {
     // animation 
-    useEffect(() => {
+  
         AOS.init({
             duration: 1500 
         });
-    }, []);
+
     const { googleLogin, registerUser } = useContext(AuthContext);
     const navigate = useNavigate();
     const handleGoogleLogin = () => {

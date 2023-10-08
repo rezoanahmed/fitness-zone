@@ -1,5 +1,5 @@
 import { FcGoogle } from "react-icons/fc";
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/ContextProvider';
 import swal from 'sweetalert';
@@ -8,11 +8,10 @@ import 'aos/dist/aos.css'
 
 const Login = () => {
     // aos animation
-    useEffect(()=>{
         AOS.init({
             duration: 1500
         })
-    },[])
+    
     const { googleLogin, loginUser } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();

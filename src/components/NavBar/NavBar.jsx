@@ -1,17 +1,12 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import Logo from '../Logo/Logo';
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../context/ContextProvider';
 import swal from 'sweetalert';
 import Aos from 'aos';
-import 'aos/dist/aos.css'
 const NavBar = () => {
     // aos animation
-    useEffect(()=>{
-        Aos.init({
-            duration: 1500
-        })
-    },[])
+    Aos.init({duration:1500})
     const {user, logOut} = useContext(AuthContext);
     // handle log out
     const handleLogOut = () =>{

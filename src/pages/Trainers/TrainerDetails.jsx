@@ -4,11 +4,10 @@ import Aos from "aos";
 
 const TrainerDetails = () => {
     // animation
-    useEffect(()=>{
         Aos.init({
             duration: 1500
         })
-    }, [])
+   
     const {id} = useParams();
     const data = useLoaderData();
     const [trainer, setTrainer] = useState({});
