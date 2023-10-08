@@ -52,6 +52,7 @@ const NavBar = () => {
                         <img src='https://i.ibb.co/Bcjq85V/user.png' alt="" className='h-[35px] w-[35px] rounded-full' />
                         
                     }
+                    <p>{user.displayName? user.displayName : user.email}</p>
                     <NavLink onClick={()=>handleLogOut()} className='p-2 rounded-md bg-red-500 text-white font-medium hover:bg-red-600'>Log Out</NavLink>    
                     </div>
                     :
