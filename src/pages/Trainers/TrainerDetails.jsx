@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
-
+import Aos from "aos";
 
 const TrainerDetails = () => {
+    // animation
+    useEffect(()=>{
+        Aos.init({
+            duration: 1500
+        })
+    }, [])
     const {id} = useParams();
     const data = useLoaderData();
     const [trainer, setTrainer] = useState({});
@@ -15,7 +20,7 @@ const TrainerDetails = () => {
     const {image, title, details, price} = trainer;
     
     return (
-        <div>
+        <div data-aos='fade-right'>
             {/* <p>Trainer Id: {id}</p> */}
 
             {/* <p>{data.length}</p> */}
