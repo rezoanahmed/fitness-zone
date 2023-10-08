@@ -95,7 +95,7 @@ const Register = () => {
 
             <h1 className='text-2xl font-semibold text-center my-5' data-aos="zoom-out">Register today and start your journey!</h1>
             <div className=' flex flex-col items-center justify-center' data-aos="fade-up">
-                <div className="card shadow-2xl bg-base-100 card-body">
+                <div className="card shadow-2xl bg-base-100 p-6">
                     <form onSubmit={register} className="">
                         <div className="form-control">
                             <label className="label">
