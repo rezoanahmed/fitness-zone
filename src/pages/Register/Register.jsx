@@ -54,6 +54,7 @@ const Register = () => {
         e.preventDefault()
         const email = e.target.email.value;
         const password = e.target.password.value;
+        const name = e.target.name.value;
         // password validation
         const error = validatePassword(password);
         if(error){
@@ -62,7 +63,7 @@ const Register = () => {
         }
         // console.log("submitted", email);
         // console.log("submitted", password);
-        registerUser(email, password)
+        registerUser(email, password, name)
             .then(user => {
                 // console.log(user);
                 e.target.name.value = "";

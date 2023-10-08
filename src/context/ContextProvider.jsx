@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import {auth} from '../firebase/firebase.config'
 import PropTypes from 'prop-types';
 export const AuthContext = createContext("");
@@ -16,10 +16,19 @@ const ContextProvider = ({children}) => {
         
     }
     // register with email and password
-    const registerUser = async (email, password) =>{
+    const registerUser = async (email, password, name) =>{
         setLoading(true);
         await createUserWithEmailAndPassword(auth, email, password);
+        await updateProfile(auth.currentUser, {
+            displayName: name,
+        }).then(() => {
+            // console.log(name);
+            // ...
+        }).catch((error) => {
+            // console.error(error);
+        });
         await logOut();
+        
     }
     // login with email and password
     const loginUser = (email, password) => {
