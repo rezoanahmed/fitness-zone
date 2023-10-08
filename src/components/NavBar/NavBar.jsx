@@ -6,25 +6,25 @@ import swal from 'sweetalert';
 import Aos from 'aos';
 const NavBar = () => {
     // aos animation
-    Aos.init({duration:1500})
-    const {user, logOut} = useContext(AuthContext);
+    Aos.init({ duration: 1500 })
+    const { user, logOut } = useContext(AuthContext);
     // handle log out
-    const handleLogOut = () =>{
+    const handleLogOut = () => {
         logOut()
-        .then(()=>{
-            swal("Great!", "You've logged out succesfully", "success");
-        })
-        .catch(()=>{
-            swal("OPPS!", "Something went wrong", "error");
-        })
+            .then(() => {
+                swal("Great!", "You've logged out succesfully", "success");
+            })
+            .catch(() => {
+                swal("OPPS!", "Something went wrong", "error");
+            })
     }
     const links = <>
-       <li><NavLink to='/'>Home</NavLink></li>
-       <li><NavLink to='/services'>Services</NavLink></li>
-       <li><NavLink to='trainers'>Trainers</NavLink></li>
-       <li><NavLink to='/plans'>Supplements Plan</NavLink></li>
-       <li><NavLink to='/about'>About</NavLink></li>
-       <li><NavLink to='/contact'>Contact</NavLink></li>
+        <li><NavLink to='/'>Home</NavLink></li>
+        <li><NavLink to='/services'>Services</NavLink></li>
+        <li><NavLink to='trainers'>Trainers</NavLink></li>
+        <li><NavLink to='/plans'>Supplements Plan</NavLink></li>
+        <li><NavLink to='/about'>About</NavLink></li>
+        <li><NavLink to='/contact'>Contact</NavLink></li>
     </>
     return (
         <>
@@ -46,20 +46,22 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    {user?
-                    <div className='flex items-center gap-2'>
-                        {user.photoURL?
-                        <img src={user.photoURL} alt="" className='h-[35px] w-[35px] rounded-full'/>
+                    {user ?
+                        <div className='flex items-center gap-2'>
+                            <div className="flex flex-col md:flex-row items-center gap-2">
+                                {user.photoURL ?
+                                    <img src={user.photoURL} alt="" className='h-4 w-4 md:h-[35px] md:w-[35px] rounded-full' />
+                                    :
+                                    <img src='https://i.ibb.co/Bcjq85V/user.png' alt="" className='h-4 w-4  md:h-[35px] md:w-[35px] rounded-full' />
+
+                                }
+                                <p className='text-sm'>{user.displayName ? user.displayName : user.email}</p>
+                            </div>
+                            <NavLink onClick={() => handleLogOut()} className='p-2 rounded-md bg-red-500 text-white font-medium hover:bg-red-600'>Log Out</NavLink>
+                        </div>
                         :
-                        <img src='https://i.ibb.co/Bcjq85V/user.png' alt="" className='h-[35px] w-[35px] rounded-full' />
-                        
+                        <NavLink to='/login' className='p-2 rounded-md bg-red-500 text-white font-medium hover:bg-red-600'>Login</NavLink>
                     }
-                    <p>{user.displayName? user.displayName : user.email}</p>
-                    <NavLink onClick={()=>handleLogOut()} className='p-2 rounded-md bg-red-500 text-white font-medium hover:bg-red-600'>Log Out</NavLink>    
-                    </div>
-                    :
-                    <NavLink to='/login' className='p-2 rounded-md bg-red-500 text-white font-medium hover:bg-red-600'>Login</NavLink>    
-                }
                 </div>
             </div>
 
