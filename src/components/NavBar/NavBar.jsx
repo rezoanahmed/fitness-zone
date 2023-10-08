@@ -1,10 +1,17 @@
-import React, { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import Logo from '../Logo/Logo';
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../context/ContextProvider';
 import swal from 'sweetalert';
-
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 const NavBar = () => {
+    // aos animation
+    useEffect(()=>{
+        Aos.init({
+            duration: 1500
+        })
+    },[])
     const {user, logOut} = useContext(AuthContext);
     // handle log out
     const handleLogOut = () =>{
@@ -26,7 +33,7 @@ const NavBar = () => {
     </>
     return (
         <>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100" data-aos='zoom-out'>
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
