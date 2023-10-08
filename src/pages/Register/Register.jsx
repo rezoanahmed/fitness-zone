@@ -87,7 +87,7 @@ const Register = () => {
         <>
 
             <h1 className='text-2xl font-semibold text-center my-5'>Register today and start your journey!</h1>
-            <div className=' flex items-center justify-center'>
+            <div className=' flex flex-col items-center justify-center'>
                 <div className="card shadow-2xl bg-base-100">
                     <form onSubmit={register} className="card-body">
                         <div className="form-control">
@@ -111,7 +111,6 @@ const Register = () => {
 
                         <div className="form-control mt-6">
                             <button className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">Register</button>
-                            {passwordError && <p className="text-red-500 mt-2">{passwordError}</p>}
                         </div>
                         <div className="form-control mt-1">
                             <button onClick={handleGoogleLogin} className="flex items-center justify-center gap-2 border px-4 py-2 rounded-lg hover:bg-blue-50"><FcGoogle className="text-2xl"></FcGoogle>Get Started with Google</button>
@@ -121,6 +120,7 @@ const Register = () => {
                         </div>
                     </form>
                 </div>
+                            {passwordError && <p className="text-red-500 mt-2">{passwordError}</p>}
             </div>
         </>
     );
