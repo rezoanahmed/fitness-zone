@@ -9,7 +9,7 @@ import 'aos/dist/aos.css'
 const Login = () => {
     // aos animation
         AOS.init({
-            duration: 1500
+            duration: 1000
         })
     
     const { googleLogin, loginUser } = useContext(AuthContext);

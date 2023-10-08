@@ -11,7 +11,7 @@ const Register = () => {
     // animation 
   
         AOS.init({
-            duration: 1500 
+            duration: 1000 
         });
 
     const { googleLogin, registerUser } = useContext(AuthContext);

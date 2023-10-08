@@ -4,16 +4,11 @@ import Aos from 'aos';
 const ServiceDetails = () => {
     // animation
         Aos.init({
-            duration: 1500
+            duration: 1000
         })
    
     const {id} = useParams()
     const [serviceDetails, setDetails] = useState({});
-    // useEffect(()=>{
-    //     fetch('/gym.json')
-    //     .then(res=>res.json())
-    //     .then(data=>setDetails(data));
-    // },[])
 
     const data = useLoaderData();
     useEffect(()=>{

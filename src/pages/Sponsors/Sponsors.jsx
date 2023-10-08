@@ -5,7 +5,7 @@ import Aos from "aos";
 const Sponsors = () => {
     // aos animation
         Aos.init({
-            duration: 1500
+            duration: 1000
         })
     
 

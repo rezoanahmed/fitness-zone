@@ -3,7 +3,7 @@ import Aos from "aos";
 const Contact = () => {
     
         Aos.init({
-            duration: 1500
+            duration: 1000
         })
     
     return (

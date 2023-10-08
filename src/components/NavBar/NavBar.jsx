@@ -6,7 +6,7 @@ import swal from 'sweetalert';
 import Aos from 'aos';
 const NavBar = () => {
     // aos animation
-    Aos.init({ duration: 1500 })
+    Aos.init({ duration: 1000 })
     const { user, logOut } = useContext(AuthContext);
     // handle log out
     const handleLogOut = () => {

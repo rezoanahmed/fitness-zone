@@ -5,7 +5,7 @@ import Aos from "aos";
 const Services = () => {
     // animation
         Aos.init({
-            duration: 1500
+            duration: 1000
         })
   
     const [service, setService] = useState([]);

@@ -5,7 +5,7 @@ const PlanDetails = () => {
     // animation
     
         Aos.init({
-            duration:1500
+            duration:1000
         })
     
     const {id} = useParams();

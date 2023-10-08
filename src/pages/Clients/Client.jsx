@@ -1,4 +1,5 @@
-import React from 'react';
+
+import PropTypes from 'prop-types'; // ES6
 
 const Client = ({ client }) => {
     const { name, message, image } = client
@@ -15,4 +16,7 @@ const Client = ({ client }) => {
     );
 };
 
+Client.propTypes={
+    client: PropTypes.object.isRequired
+}
 export default Client;
