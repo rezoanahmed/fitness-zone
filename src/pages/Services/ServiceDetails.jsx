@@ -36,8 +36,8 @@ const ServiceDetails = () => {
                 </ul>
             </div> */}
             <div className="mt-10">
-                <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-                <img src={image} className="md:h-[50vh] md:w-[50vh] rounded-xl" alt="" />
+                <div className="flex flex-col items-center justify-center gap-10">
+                <img src={image} className="h-[70vh] rounded-xl" alt="" />
                 <div className="flex flex-col gap-3">
                 <p className="text-4xl font-bold">{title}</p>
                 <p className="text-red-600 font-bold">{price}</p>

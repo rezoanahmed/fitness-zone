@@ -34,5 +34,41 @@
             "Creatine Monohydrate",
             "High-Calorie Shakes"
         ]
+    },
+    {
+        "id": "sp104",
+        "title": "Keto Booster Plan",
+        "image": "https://i.ibb.co/xFpjFPW/sam-moghadam-khamseh-Xe-ACb-KDkj4-unsplash.jpg",
+        "price": 65.00,
+        "details": "Tailored for individuals on the ketogenic diet, aiming to optimize fat burning.",
+        "supplements": [
+            "Exogenous Ketones",
+            "MCT Oil",
+            "Electrolyte Supplements"
+        ]
+    },
+    {
+        "id": "sp105",
+        "title": "Vegetarian Essentials Plan",
+        "image": "https://i.ibb.co/c6LxTjd/pexels-chen-te-18467142.jpg",
+        "price": 55.00,
+        "details": "Crafted for vegetarians to ensure all essential nutrients are covered.",
+        "supplements": [
+            "Plant-Based Protein",
+            "Vegan Omega-3 (from Algal Oil)",
+            "B12 and Iron Supplements"
+        ]
+    },
+    {
+        "id": "sp106",
+        "title": "Endurance Athlete Plan",
+        "image": "https://i.ibb.co/LzCpBSz/20200417-170853-712220-baoquanthucpham-max-800x800.png",
+        "price": 80.00,
+        "details": "For long-distance runners, cyclists, and other endurance athletes.",
+        "supplements": [
+            "Electrolyte Tablets",
+            "Slow-Release Carbohydrate Supplements",
+            "Pea Protein Isolate"
+        ]
     }
 ]

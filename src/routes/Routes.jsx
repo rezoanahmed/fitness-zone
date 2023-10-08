@@ -41,7 +41,7 @@ export const router = createBrowserRouter([
         {
           path: '/services/:id',
           element: <PrivateRoutes><ServiceDetails></ServiceDetails></PrivateRoutes>,
-          loader: ()=>fetch('/gym.json')
+          loader: ()=>fetch('/events.json')
         },
         {
             path: '/trainers',
@@ -50,7 +50,7 @@ export const router = createBrowserRouter([
         {
           path: '/trainers/:id',
           element: <PrivateRoutes><TrainerDetails></TrainerDetails></PrivateRoutes>,
-          loader: ()=>fetch('/personalTrainer.json'),
+          loader: ()=>fetch('/sponsors.json'),
         },
         {
           path: '/plans',

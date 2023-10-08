@@ -1,0 +1,38 @@
+[
+    {
+        "id": "sp101",
+        "title": "Iron Bull Strength",
+        "image": "https://i.ibb.co/fQ6gMtv/images.png",
+        "details": "Established over twenty years ago, Iron Bull Strength has been at the forefront of the fitness industry, dedicated to manufacturing top-tier gym equipment. Their reputation is built on consistently delivering high-quality products that cater to the needs of fitness enthusiasts around the world, ensuring they achieve their goals with the best equipment available."
+    },
+    {
+        "id": "sp102",
+        "title": "YogaLife Essentials",
+        "image": "https://i.ibb.co/d6Wpgrh/b8368b92e91a1aeec862a117843ce82bf5cc22f4c50834a613734ee3c221d371.jpg",
+        "details": "YogaLife Essentials has earned its name in the yoga community by providing products that prioritize both functionality and comfort. From top-notch yoga mats to elegant apparel and essential accessories, they ensure every yogi can have a holistic and serene experience, deepening their practice in the most comfortable way."
+    },
+    {
+        "id": "sp103",
+        "title": "HIITFit Gears",
+        "image": "https://i.ibb.co/HXjT6gM/fitness-gear-logo-gym-logo-vector.jpg",
+        "details": "HIITFit Gears stands as a beacon of innovation in the realm of sportswear. Favored by many renowned athletes and fitness trainers, their products are not only durable but also stylishly designed. Each piece is crafted to enhance performance, making the wearer feel at their best even during the most intense workouts."
+    },
+    {
+        "id": "sp104",
+        "title": "HydraHealth Bottles",
+        "image": "https://i.ibb.co/pw4fRfv/02-12-scaled.jpg",
+        "details": "Hydration is crucial, and HydraHealth Bottles understands this better than anyone. Their collection ranges from eco-conscious bottles to cutting-edge smart hydration solutions. Athletes, fitness lovers, and even the everyday user have come to trust HydraHealth for its commitment to quality and innovative designs that keep them hydrated efficiently."
+    },
+    {
+        "id": "sp105",
+        "title": "Runway Sports Shoes",
+        "image": "https://i.ibb.co/ph48sRL/pngtree-modern-sneaker-shoe-logo-image-401564.jpg",
+        "details": "Runway Sports Shoes isn't just a brand; it's a testament to how technology and comfort can come together to produce high-performance footwear. Tailored for runners, sprinters, and everyone in between, professionals consistently trust their range. Each shoe is a blend of modern tech and design, ensuring optimum performance every step of the way."
+    },
+    {
+        "id": "sp106",
+        "title": "ProteinPeak Supplements",
+        "image": "https://i.ibb.co/k9h4X7c/muscle-nutrition-protein-logo-line-vecto-Graphics-49808514-1.jpg",
+        "details": "Nutrition is a cornerstone of fitness, and ProteinPeak Supplements have been leading the way with their array of products. Their range encompasses everything from whey proteins and BCAAs to energizing pre-workout mixes. With a staunch commitment to clean and effective nutrition, they've helped countless athletes and fitness aficionados meet and exceed their nutritional aspirations."
+    }
+]

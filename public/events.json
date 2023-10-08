@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "title": "Yoga Retreat Day",
+        "details": "Immerse yourself in a transformative day of yoga and mindfulness. Dive deep into traditional yoga postures, master breathwork techniques, and participate in guided meditations that'll rejuvenate your mind and body.",
+        "price": "$40",
+        "image": "https://i.ibb.co/1r9rB7f/ginny-rose-stewart-Uxkc-Sz-RWM2s-unsplash.jpg",
+        "facilities": [
+            "Yoga Mats",
+            "Meditation Zone",
+            "Herbal Teas Corner",
+            "Guided Meditation Sessions",
+            "Nature Walk Paths",
+            "Peaceful Relaxation Areas",
+            "Workshops on Yoga Philosophy"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Swim & Sauna Relaxation Day",
+        "details": "Delight in a therapeutic day of aquatic activities, beginning with invigorating swimming workouts, and culminating in a calming sauna session. Complement your day with refreshments designed to hydrate and nourish.",
+        "price": "$55",
+        "image": "https://i.ibb.co/dKQ3WDF/pexels-mali-maeder-1415810.jpg",
+        "facilities": [
+            "Olympic-sized Pool",
+            "Sauna Cabin",
+            "Refreshments",
+            "Jacuzzi",
+            "Steam Room",
+            "Aqua Aerobics",
+            "Lounge Area"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Advanced Fitness Bootcamp",
+        "details": "Push your limits at our intensive fitness bootcamp. Experience a range of challenging workouts, receive expert guidance from top trainers, and gain insights into nutrition to fuel your fitness journey effectively.",
+        "price": "$70",
+        "image": "https://i.ibb.co/VY16GhN/david-marioni-F-lns58a-ec-unsplash.jpg",
+        "facilities": [
+            "Premium Equipment",
+            "Nutrition Workshop",
+            "Group Workout Zones",
+            "Outdoor Workout Area",
+            "Recovery and Stretching Zone",
+            "Protein Shake Bar",
+            "Fitness Assessment Area"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Holistic Wellness Retreat",
+        "details": "Embark on a weekend of complete rejuvenation, focusing on holistic wellness. Participate in nutrition workshops, engage in therapeutic sessions, and receive personalized advice from wellness experts to align mind, body, and spirit.",
+        "price": "$120",
+        "image": "https://i.ibb.co/v4T3HsF/pexels-rdne-stock-project-8313443.jpg",
+        "facilities": [
+            "Nutrition Workshops",
+            "Holistic Therapies",
+            "Personal Training Sessions",
+            "Detox Juice Bar",
+            "Massage Therapy Rooms",
+            "Guided Nature Walks",
+            "Mindfulness Seminars"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Couples Gym Challenge",
+        "details": "Bring your partner and experience a unique gym challenge tailored for couples. Engage in tandem workouts, coordinated strength training, and synchronization exercises. Great for couples to motivate each other and achieve fitness milestones together.",
+        "price": "$50",
+        "image": "https://i.ibb.co/M13bCyX/pexels-monstera-production-6998349.jpg",
+        "facilities": [
+            "Duo Workout Stations",
+            "Professional Trainers",
+            "Tandem Cardio Sessions",
+            "Nutrition and Hydration Bar",
+            "Team Building Activities",
+            "Cool-down and Stretching Zone",
+            "Motivational Talks"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Family Gym Extravaganza",
+        "details": "A day dedicated to families at the gym. Engage in family-friendly workouts, kids' fitness challenges, and sessions that allow parents and children to work out together. Learn the essence of health and fitness in a fun, interactive environment.",
+        "price": "$85",
+        "image": "https://i.ibb.co/LCJ73yJ/pexels-pavel-danilyuk-6339323.jpg",
+        "facilities": [
+            "Kids' Gym Zone",
+            "Parent-Child Workout Stations",
+            "Group Exercise Areas",
+            "Nutrition Workshops for Families",
+            "Interactive Gym Games",
+            "Health and Fitness Quizzes",
+            "Relaxation and Massage Zone"
+        ]
+    }
+]
