@@ -1,8 +1,14 @@
 import { useEffect, useState } from "react";
 import Trainer from "./Trainer";
-
+import Aos from "aos";
 
 const Trainers = () => {
+    // aos animation
+    useEffect(()=>{
+        Aos.init({
+            duration: 1500
+        })
+    },[])
 
     const [trainer, setTrainer] = useState([]);
     useEffect(() => {
@@ -17,7 +23,15 @@ const Trainers = () => {
             <div className="mt-10">
                 <h1 className="my-5 text-4xl font-semibold text-center">Transforming Potential Into Power by Personal Trainers</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {trainer?.map(element => <Trainer key={element.id} trainer={element}></Trainer>)}
+                    {trainer?.map((element, index) => <Trainer 
+                    key={element.id} 
+                    trainer={element}
+                    data-aos='zoom-in-up'
+                    data-aos-delay={`${index}*100`}
+
+                    >
+
+                    </Trainer>)}
                 </div>
             </div>
         </>
