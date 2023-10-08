@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-
+import PropTypes from 'prop-types';
 const Trainer = ({trainer, ...props}) => {
     const {id, title, image} = trainer;
     return (
@@ -13,4 +13,7 @@ const Trainer = ({trainer, ...props}) => {
     );
 };
 
+Trainer.propTypes={
+    trainer: PropTypes.object.isRequired
+}
 export default Trainer;

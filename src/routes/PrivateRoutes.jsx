@@ -12,7 +12,7 @@ const PrivateRoutes = ({children}) => {
     // if the user is logged in, he should see the children
     if(loading){
         return <div className="flex justify-center items-center h-screen">
-            <span className="loading loading-spinner w-1/4"></span>
+            <span className="loading loading-ball text-red-500 w-1/4"></span>
         </div>;
     }
     if(user){

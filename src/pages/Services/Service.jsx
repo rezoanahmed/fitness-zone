@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-
+import PropTypes from 'prop-types';
 const Service = ({service, ...props}) => {
     const {id, title, price, image} = service;
     return (
@@ -15,4 +15,7 @@ const Service = ({service, ...props}) => {
     );
 };
 
+Service.propTypes = {
+    service: PropTypes.object.isRequired
+}
 export default Service;

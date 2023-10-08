@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import PropTypes from 'prop-types';
 
 const Plan = ({plan, ...props}) => {
     const {id,title, image, price} = plan;
@@ -16,4 +16,7 @@ const Plan = ({plan, ...props}) => {
     );
 };
 
+Plan.propTypes = {
+    plan: PropTypes.object.isRequired
+}
 export default Plan;
