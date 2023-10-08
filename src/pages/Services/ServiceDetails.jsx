@@ -44,7 +44,7 @@ const ServiceDetails = () => {
                 {/* <p>ID: {id}</p> */}
                 <p>{details}</p>
                 <ul className='list-disc px-8'>
-                    {facilities?.map(e=><li>{e}</li>)}
+                    {facilities?.map((e, i)=><li key={i}>{e}</li>)}
                 </ul>
                 
                 <button className="bg-red-600 text-white py-2 rounded-lg">Enroll Now</button>

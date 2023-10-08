@@ -5,11 +5,16 @@ import { Navigate, useLocation, useNavigate } from "react-router-dom";
 
 const PrivateRoutes = ({children}) => {
 
-    const {user} = useContext(AuthContext)
+    const {user, loading} = useContext(AuthContext)
     const location = useLocation();
     // console.log(location);
     // console.log(location.pathname); // this is the url which the user clicked before login
     // if the user is logged in, he should see the children
+    if(loading){
+        return <div className="flex justify-center items-center h-screen">
+            <span className="loading loading-spinner w-1/4"></span>
+        </div>;
+    }
     if(user){
         return children;
     }

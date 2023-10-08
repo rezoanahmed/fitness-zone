@@ -30,7 +30,7 @@ const PlanDetails = () => {
                 <p>{details}</p>
                 {/* <p>ID: {id}</p> */}
                 <ul className="list-disc px-8">
-                    {supplements?.map(element=><li>{element}</li>)}
+                    {supplements?.map((element, index)=><li key={index}>{element}</li>)}
                 </ul>
                 <button className="bg-red-600 text-white py-2 rounded-lg">Buy Now</button>
                 </div>
