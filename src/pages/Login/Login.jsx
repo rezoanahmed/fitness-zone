@@ -12,7 +12,7 @@ const Login = () => {
     // sign in with google
     const handleGoogleLogin = () => {
         googleLogin()
-            .then(user => {
+            .then(() => {
                 // console.log(user)
                 navigate(location?.state? location.state:'/');
             })

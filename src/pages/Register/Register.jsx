@@ -2,7 +2,7 @@ import { FcGoogle } from "react-icons/fc";
 import swal from 'sweetalert';
 
 
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link, useNavigate, useNavigation } from 'react-router-dom';
 import { AuthContext } from '../../context/ContextProvider';
 
@@ -18,12 +18,41 @@ const Register = () => {
             .catch(err => console.log(err))
     }
 
+    // password validation
+    const [passwordError, setPasswordError] = useState('');
+    const validatePassword = (password) => {
+        const minLength = 6;
+        const hasUppercase = /[A-Z]/.test(password);
+        const hasSpecialCharacter = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(password);
+
+        if (password.length < minLength) {
+            return "Password should be at least 6 characters long.";
+        }
+
+        if (!hasUppercase) {
+            return "Password should contain at least one uppercase letter.";
+        }
+
+        if (!hasSpecialCharacter) {
+            return "Password should contain at least one special character.";
+        }
+
+        return null;
+    };
+
+    
+    
     // registration form submission
     const register = e => {
         e.preventDefault()
         const email = e.target.email.value;
         const password = e.target.password.value;
-
+        // password validation
+        const error = validatePassword(password);
+        if(error){
+            setPasswordError(error);
+            return;
+        }
         // console.log("submitted", email);
         // console.log("submitted", password);
         registerUser(email, password)
@@ -34,7 +63,7 @@ const Register = () => {
                 e.target.password.value = "";
                 swal("Congratulations!", "Now You're a member of GYM ZONE", "success");
                 navigate('/login')
-                
+
 
             })
             .catch(err => {
@@ -43,7 +72,7 @@ const Register = () => {
                 if (code == 'auth/email-already-in-use') {
 
                     swal("Sorry!", "This email is already in use", "error");
-                } else if(code == 'auth/invalid-email'){
+                } else if (code == 'auth/invalid-email') {
                     swal("Invalid Email Address", "", "error");
                 }
                 else {
@@ -56,7 +85,7 @@ const Register = () => {
 
     return (
         <>
-            
+
             <h1 className='text-2xl font-semibold text-center my-5'>Register today and start your journey!</h1>
             <div className=' flex items-center justify-center'>
                 <div className="card shadow-2xl bg-base-100">
@@ -82,6 +111,7 @@ const Register = () => {
 
                         <div className="form-control mt-6">
                             <button className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">Register</button>
+                            {passwordError && <p className="text-red-500 mt-2">{passwordError}</p>}
                         </div>
                         <div className="form-control mt-1">
                             <button onClick={handleGoogleLogin} className="flex items-center justify-center gap-2 border px-4 py-2 rounded-lg hover:bg-blue-50"><FcGoogle className="text-2xl"></FcGoogle>Get Started with Google</button>
