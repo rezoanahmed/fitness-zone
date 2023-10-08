@@ -55,6 +55,7 @@ const Register = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         const name = e.target.name.value;
+        const photoURL = e.target.photoURL.value;
         // password validation
         const error = validatePassword(password);
         if(error){
@@ -63,7 +64,7 @@ const Register = () => {
         }
         // console.log("submitted", email);
         // console.log("submitted", password);
-        registerUser(email, password, name)
+        registerUser(email, password, name, photoURL)
             .then(user => {
                 // console.log(user);
                 e.target.name.value = "";
@@ -103,6 +104,12 @@ const Register = () => {
                                 <span className="label-text">Name</span>
                             </label>
                             <input name='name' type="text" placeholder="Enter Your Full Name" className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Photo URL</span>
+                            </label>
+                            <input name='photoURL' type="text" placeholder="Enter Your Photo URL" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">

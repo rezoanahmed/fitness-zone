@@ -16,11 +16,12 @@ const ContextProvider = ({children}) => {
         
     }
     // register with email and password
-    const registerUser = async (email, password, name) =>{
+    const registerUser = async (email, password, name, photoURL) =>{
         setLoading(true);
         await createUserWithEmailAndPassword(auth, email, password);
         await updateProfile(auth.currentUser, {
             displayName: name,
+            photoURL: photoURL,
         }).then(() => {
             // console.log(name);
             // ...
