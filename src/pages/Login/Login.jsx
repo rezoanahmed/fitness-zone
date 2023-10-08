@@ -14,7 +14,7 @@ const Login = () => {
         googleLogin()
             .then(user => {
                 // console.log(user)
-                navigate('/');
+                navigate(location?.state? location.state:'/');
             })
             .catch(err => console.log(err))
     }
