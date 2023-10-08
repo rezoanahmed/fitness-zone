@@ -1,9 +1,10 @@
 
 import Hero from '../../components/Hero/Hero';
 import Services from '../Services/Services';
-import Trainers from '../Sponsors/Sponsors';
 import Plans from '../Plans/Plans';
+import Sponsors from '../Sponsors/Sponsors'
 import Footer from '../../components/Footer/Footer';
+import Clients from '../Clients/Clients';
 
 const Home = () => {
     return (
@@ -12,7 +13,8 @@ const Home = () => {
 
                 <Hero></Hero>
                 <Services></Services>
-                <Trainers></Trainers>
+                <Clients></Clients>
+                <Sponsors></Sponsors>
                 <Plans></Plans>
                 <Footer></Footer>
             </div>

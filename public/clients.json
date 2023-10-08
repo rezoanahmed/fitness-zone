@@ -1,0 +1,38 @@
+[
+    {
+        "id": "t001",
+        "name": "Sophia Johnson",
+        "message": "Attending the Fitness Expo last year was a game-changer for me. The workshops were enlightening, and I've incorporated so many tips into my routine. Can't wait for this year's event!",
+        "image": "https://i.ibb.co/fkK0vWJ/sarah-brown-t-Td-C88-6a-I-unsplash.jpg"
+    },
+    {
+        "id": "t002",
+        "name": "Dylan Martinez",
+        "message": "I've been to many fitness events, but none compare to the level of expertise and passion I witnessed here. The community feel and the knowledge sharing is unparalleled.",
+        "image": "https://i.ibb.co/LRNmMCk/wells-chan-H-v-Axu-Wxmi8-unsplash.jpg"
+    },
+    {
+        "id": "t003",
+        "name": "Ava Smith",
+        "message": "The speakers were top-notch, and the hands-on sessions gave me practical insights that I've been using daily. Highly recommend to anyone serious about their fitness journey!",
+        "image": "https://i.ibb.co/vdR74pY/pexels-kha-ruxury-921646.jpg"
+    },
+    {
+        "id": "t004",
+        "name": "Ethan Brown",
+        "message": "From the organization to the quality of sessions, everything was impeccable! Met so many like-minded individuals and got a ton of value. See you next year!",
+        "image": "https://i.ibb.co/NS9kX2X/dollar-gill-f9-W9svq-Hp-SU-unsplash.jpg"
+    },
+    {
+        "id": "t005",
+        "name": "Isabella Lee",
+        "message": "The event was an eye-opener! The blend of traditional fitness methods with new-age techniques was refreshing. I'm eagerly waiting for the next one.",
+        "image": "https://i.ibb.co/vhBy5vV/sigmund-jzz-3j-WMz-HA-unsplash.jpg"
+    },
+    {
+        "id": "t006",
+        "name": "Liam Wilson",
+        "message": "Kudos to the team for putting together such an informative event. I've taken away so much and have already seen improvements in my fitness levels.",
+        "image": "https://i.ibb.co/VS1cJkm/christian-buehner-DIt-Ylc26z-VI-unsplash.jpg"
+    }
+]
