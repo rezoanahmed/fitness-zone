@@ -4,7 +4,7 @@ import {auth} from '../firebase/firebase.config'
 
 export const AuthContext = createContext("");
 const ContextProvider = ({children}) => {
-    const [user, setUser] = useState('');
+    const [user, setUser] = useState(null);
     // sign in with google
     // const testNumber = 0;
     const googleLogin = () =>{
@@ -13,8 +13,9 @@ const ContextProvider = ({children}) => {
         
     }
     // register with email and password
-    const registerUser = (email, password) =>{
-        return createUserWithEmailAndPassword(auth, email, password);
+    const registerUser = async (email, password) =>{
+        await createUserWithEmailAndPassword(auth, email, password);
+        await logOut();
     }
     // login with email and password
     const loginUser = (email, password) => {
