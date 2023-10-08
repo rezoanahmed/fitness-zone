@@ -1,12 +1,20 @@
 import { FcGoogle } from "react-icons/fc";
 import swal from 'sweetalert';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
-import { useContext, useState } from 'react';
-import { Link, useNavigate, useNavigation } from 'react-router-dom';
+import { useContext, useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/ContextProvider';
 
 const Register = () => {
+    // animation 
+    useEffect(() => {
+        AOS.init({
+            duration: 1500 
+        });
+    }, []);
     const { googleLogin, registerUser } = useContext(AuthContext);
     const navigate = useNavigate();
     const handleGoogleLogin = () => {
@@ -86,8 +94,8 @@ const Register = () => {
     return (
         <>
 
-            <h1 className='text-2xl font-semibold text-center my-5'>Register today and start your journey!</h1>
-            <div className=' flex flex-col items-center justify-center'>
+            <h1 className='text-2xl font-semibold text-center my-5' data-aos="zoom-out">Register today and start your journey!</h1>
+            <div className=' flex flex-col items-center justify-center' data-aos="fade-up">
                 <div className="card shadow-2xl bg-base-100">
                     <form onSubmit={register} className="card-body">
                         <div className="form-control">

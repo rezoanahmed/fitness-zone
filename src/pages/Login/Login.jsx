@@ -1,11 +1,18 @@
 import { FcGoogle } from "react-icons/fc";
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/ContextProvider';
 import swal from 'sweetalert';
-
+import AOS from "aos";
+import 'aos/dist/aos.css'
 
 const Login = () => {
+    // aos animation
+    useEffect(()=>{
+        AOS.init({
+            duration: 1500
+        })
+    },[])
     const { googleLogin, loginUser } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
@@ -48,8 +55,8 @@ const Login = () => {
     }
     return (
         <>
-            <h1 className='text-2xl font-semibold text-center my-5'>Login today and pump yourself!</h1>
-            <div className=' flex items-center justify-center'>
+            <h1 className='text-2xl font-semibold text-center my-5' data-aos='zoom-out'>Login today and pump yourself!</h1>
+            <div className=' flex items-center justify-center' data-aos='fade-up'>
                 <div className="card shadow-2xl bg-base-100">
                     <form onSubmit={handleSignIn} className="card-body">
                         <div className="form-control">
