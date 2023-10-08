@@ -7,15 +7,15 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Services from "../pages/Services/Services";
-import Trainers from "../pages/Trainers/Trainers";
 import Plans from "../pages/Plans/Plans";
 import ServiceDetails from "../pages/Services/ServiceDetails";
-import TrainerDetails from "../pages/Trainers/TrainerDetails";
 import PlanDetails from "../pages/Plans/PlanDetails";
 import Error from '../pages/Error/Error'
 import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
 import PrivateRoutes from "./PrivateRoutes";
+import Sponsors from "../pages/Sponsors/Sponsors";
+import SponsorDetails from "../pages/Sponsors/SponsorDetails";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -44,12 +44,12 @@ export const router = createBrowserRouter([
           loader: ()=>fetch('/events.json')
         },
         {
-            path: '/trainers',
-            element: <Trainers></Trainers>
+            path: '/sponsors',
+            element: <Sponsors></Sponsors>
         },
         {
-          path: '/trainers/:id',
-          element: <PrivateRoutes><TrainerDetails></TrainerDetails></PrivateRoutes>,
+          path: '/sponsors/:id',
+          element: <PrivateRoutes><SponsorDetails></SponsorDetails></PrivateRoutes>,
           loader: ()=>fetch('/sponsors.json'),
         },
         {

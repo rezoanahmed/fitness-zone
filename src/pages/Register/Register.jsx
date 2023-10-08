@@ -69,7 +69,7 @@ const Register = () => {
                 e.target.name.value = "";
                 e.target.email.value = "";
                 e.target.password.value = "";
-                swal("Congratulations!", "Now You're a member of GYM ZONE", "success");
+                swal("Congratulations!", "Now You're a member of Fitness Zone", "success");
                 navigate('/login')
 
 

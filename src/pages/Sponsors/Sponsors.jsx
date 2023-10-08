@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Trainer from "./Trainer";
+import Sponsor from "./Sponsor";
 import Aos from "aos";
 
-const Trainers = () => {
+const Sponsors = () => {
     // aos animation
         Aos.init({
             duration: 1500
@@ -22,19 +22,19 @@ const Trainers = () => {
             <div className="mt-10">
                 <h1 className="my-5 text-4xl font-semibold text-center">Our Honourable Sponsors</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {trainer?.map((element, index) => <Trainer 
+                    {trainer?.map((element, index) => <Sponsor 
                     key={element.id} 
-                    trainer={element}
+                    sponsor={element}
                     data-aos='zoom-in-up'
                     data-aos-delay={`${index}*100`}
 
                     >
 
-                    </Trainer>)}
+                    </Sponsor>)}
                 </div>
             </div>
         </>
     );
 };
 
-export default Trainers;
+export default Sponsors;
