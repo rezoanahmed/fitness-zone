@@ -1,10 +1,11 @@
-
+import Aos from "aos";
 
 const About = () => {
+    Aos.init({duration: 1500})
     return (
         <>
         
-        <div>
+        <div data-aos='zoom-in'>
             <section className="mt-8 p-4 rounded-lg shadow-md">
             <h2 className="text-3xl font-bold mb-4 border-b pb-2 border-red-600">About Us</h2>
             <p className="mt-4 leading-relaxed">
