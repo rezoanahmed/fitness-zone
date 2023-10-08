@@ -15,6 +15,7 @@ import PlanDetails from "../pages/Plans/PlanDetails";
 import Error from '../pages/Error/Error'
 import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
+import PrivateRoutes from "./PrivateRoutes";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -39,7 +40,7 @@ export const router = createBrowserRouter([
         },
         {
           path: '/services/:id',
-          element: <ServiceDetails></ServiceDetails>,
+          element: <PrivateRoutes><ServiceDetails></ServiceDetails></PrivateRoutes>,
           loader: ()=>fetch('/gym.json')
         },
         {
@@ -48,7 +49,7 @@ export const router = createBrowserRouter([
         },
         {
           path: '/trainers/:id',
-          element: <TrainerDetails></TrainerDetails>,
+          element: <PrivateRoutes><TrainerDetails></TrainerDetails></PrivateRoutes>,
           loader: ()=>fetch('/personalTrainer.json'),
         },
         {
@@ -57,7 +58,7 @@ export const router = createBrowserRouter([
         },
         {
           path: '/plans/:id',
-          element: <PlanDetails></PlanDetails>,
+          element: <PrivateRoutes><PlanDetails></PlanDetails></PrivateRoutes>,
           loader: ()=>fetch('/gymSupplements.json')
         },
         {
