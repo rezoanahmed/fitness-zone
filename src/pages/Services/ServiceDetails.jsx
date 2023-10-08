@@ -1,7 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
-
+import Aos from 'aos';
 const ServiceDetails = () => {
+    // animation
+    useEffect(()=>{
+        Aos.init({
+            duration: 1500
+        })
+    },[])
     const {id} = useParams()
     const [serviceDetails, setDetails] = useState({});
     // useEffect(()=>{
@@ -18,7 +24,7 @@ const ServiceDetails = () => {
     const {title, image, details, price, facilities} = serviceDetails;
 
     return (
-        <div>
+        <div data-aos='fade-right'>
             {/* <p>{id}</p> */}
             {/* <div className='mt-10 space-y-2 p-4'>
                 <img src={image} alt="" className='h-[50vh] mx-auto' />
