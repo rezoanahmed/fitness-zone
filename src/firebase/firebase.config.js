@@ -7,12 +7,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDaFvrsGr0IQAjox5JUk8BEZOWruok13iQ",
-  authDomain: "gym-zone-abd0e.firebaseapp.com",
-  projectId: "gym-zone-abd0e",
-  storageBucket: "gym-zone-abd0e.appspot.com",
-  messagingSenderId: "358338856293",
-  appId: "1:358338856293:web:0f14ecedf99b7b1bc7cd8c"
+  apiKey: import.meta.env.VITE_api,
+  authDomain: import.meta.env.VITE_domain,
+  projectId: import.meta.env.VITE_project,
+  storageBucket: import.meta.env.VITE_storage,
+  messagingSenderId: import.meta.env.VITE_sender,
+  appId: import.meta.env.VITE_app
 };
 
 // Initialize Firebase
